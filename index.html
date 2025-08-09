@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Derivadas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Proyecto: Derivadas</h1>
+    </header>
+
+    <main>
+         <section>
+        <h2>Derivada de una Sucesión</h2>
+        <p>
+            La derivada de una sucesión se entiende como la tasa de cambio en el límite cuando el índice tiende al infinito. 
+            Se estudia observando el comportamiento de diferencias finitas y su relación con la derivación clásica.
+        </p>
+        <h3> Ejemplo en Python:</h3>
+        <pre>
+import sympy as sp
+
+n = sp.Symbol('n')
+a_n = 1/(n+1)  # Definimos la sucesión
+derivada = sp.diff(a_n, n)  
+print("La derivada de la sucesión es:", derivada)
+        </pre>
+    </section>
+
+    <section>
+        <h2> Teorema Fundamental del Cálculo</h2>
+        <p>
+            El teorema fundamental del cálculo conecta la derivación y la integración. 
+            Establece que si <span class="highlight">F</span> es una antiderivada de <span class="highlight">f</span>, entonces:
+            <br><strong>∫[a,b] f(x) dx = F(b) - F(a)</strong>
+        </p>
+        <h3>Ejemplo en Python:</h3>
+        <pre>
+import sympy as sp
+
+x = sp.Symbol('x')
+f = sp.sin(x)  # Función f(x)
+integral = sp.integrate(f, (x, 0, sp.pi))  
+print("La integral definida de sin(x) en [0, π] es:", integral)
+        </pre>
+    </section>
+        <section>
+            <h2>Derivación</h2>
+            <p>
+                La derivación en cálculo es un proceso que permite calcular la tasa de cambio de una función respecto a una de sus variables.
+                <br>En términos más sencillos, la derivada de una función en un punto determinado nos dice cómo cambia el valor de la función 
+                cuando hacemos un pequeño cambio en la variable independiente.
+            </p>
+        </section>
+
+        <section>
+            <h2>Reglas básicas para derivar</h2>
+            <ul>
+                <li><strong>Regla de la suma:</strong> (f + g)' = f' + g'</li>
+                <li><strong>Regla del producto:</strong> (f · g)' = f' · g + f · g'</li>
+                <li><strong>Regla del cociente:</strong> (f / g)' = (f' · g - f · g') / g²</li>
+                <li><strong>Regla de la cadena:</strong> (f(g(x)))' = f'(g(x)) · g'(x)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>¿Qué es una función derivable?</h2>
+            <p>
+                Una función es derivable en x si su derivada en x existe, y derivable en un intervalo abierto (a, b) si es derivable en todos los puntos de ese intervalo.
+                <br>Además de f ’(x) que se lee “f prima de x”, se usan otras notaciones para la derivada de y = f(x).
+            </p>
+        </section>
+
+        <section>
+            <h2>La importancia de las derivadas</h2>
+            <ul>
+                <li><strong>Tasa de cambio:</strong> Permiten medir cómo varía una cantidad respecto a otra (ej. velocidad).</li>
+                <li><strong>Optimización:</strong> Ayudan a encontrar máximos y mínimos en problemas prácticos.</li>
+                <li><strong>Análisis de funciones:</strong> Determinan pendientes, puntos críticos y el comportamiento de curvas.</li>
+                <li><strong>Aplicaciones reales:</strong> Usadas en física, economía, ingeniería, medicina y más.</li>
+                <li><strong>Modelado y predicción:</strong> Fundamentales en ecuaciones diferenciales para describir fenómenos.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Derivación sucesiva</h2>
+            <p>
+                En cálculo, la derivación sucesiva, también conocida como derivadas de orden superior, se refiere al proceso de derivar repetidamente una función para obtener nuevas funciones derivadas.
+            </p>
+            <ul>
+                <li><strong>Primera derivada:</strong> Representa la tasa de cambio instantánea de la función original.</li>
+                <li><strong>Segunda derivada:</strong> Es la derivada de la primera derivada y proporciona información sobre la concavidad de la función.</li>
+                <li><strong>Derivadas de orden superior:</strong> Se pueden seguir derivando para obtener terceras, cuartas derivadas, etc.</li>
+            </ul>
+            <h3>Importancia:</h3>
+            <ul>
+                <li>Análisis de la curvatura de una función.</li>
+                <li>Optimización de máximos y mínimos locales.</li>
+                <li>Estudio de velocidad y aceleración en física.</li>
+                <li>Resolución de ecuaciones diferenciales.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Ejemplos de derivadas</h2>
+            <ul>
+                <li><strong>Función polinómica:</strong> f(x)= 5x³ - 2x² + 7x - 4  
+                    <br>f'(x)= 15x² - 4x + 7</li>
+                <li><strong>Función con raíz cuadrada:</strong> f(x)= √x  
+                    <br>f'(x)= 1/(2√x)</li>
+                <li><strong>Función racional:</strong> f(x)= (2x³)/(x²+1)  
+                    <br>f'(x)= (2x⁴+6x²)/(x²+1)²</li>
+                <li><strong>Función exponencial:</strong> f(x)= e^(2x)  
+                    <br>f'(x)= 2e^(2x)</li>
+                <li><strong>Función logarítmica:</strong> f(x)= ln(x)  
+                    <br>f'(x)= 1/x</li>
+                <li><strong>Función trigonométrica:</strong> f(x)= sin(x)  
+                    <br>f'(x)= cos(x)</li>
+            </ul>
+        </section>
+    </main>
+
+    <div class="name">
+        <p>Luis Murad Garcia Albornoz - Valeria Rosalía Loeza Hernández</p>
+    </div>
+</body>
+</html>
